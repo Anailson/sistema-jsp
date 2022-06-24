@@ -51,9 +51,8 @@ public class FilterAutenticacao implements Filter {
 		} else {
 			chain.doFilter(request, response);
 		}
-				
+			
 	}
-
 	//iniciar os processo ou recursos qd o servidor sobre o projeto - exemplo: iniciar a conexão com o banco
 	public void init(FilterConfig fConfig) throws ServletException {
 		
