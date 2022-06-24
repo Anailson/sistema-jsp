@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionActivationListener;
 
 /**
- * FILTER INTERCEPTA TODAS AS REQUSIÇÕES QUE VIER DO PROJETO OU MAPEAMENTO
+ * FILTER INTERCEPTA TODAS AS REQUISIÇÕES QUE VIER DO PROJETO OU MAPEAMENTO
  */
 @WebFilter(urlPatterns = {"/principal/*"})
 public class FilterAutenticacao implements Filter {
@@ -40,8 +40,8 @@ public class FilterAutenticacao implements Filter {
 		String urlParaAutenticar = req.getServletPath();//URL que está sendo acessada.
 		
 		//VALIDAR SER ESTÁ LOGADO - Caso não esteja redirecionar para a tela de login
-		if (usuarioLogado == null || (usuarioLogado != null && usuarioLogado.isEmpty()) &&
-				!urlParaAutenticar.contains("/principal/ServletLogin")) {
+		if (usuarioLogado == null &&
+				!urlParaAutenticar.equalsIgnoreCase("/principal/ServletLogin")) {
 			
 			RequestDispatcher redireciona = request.getRequestDispatcher("/index.jsp?url=" + urlParaAutenticar);
 			request.setAttribute("msg", "Por favor realize o login!");

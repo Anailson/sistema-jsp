@@ -14,7 +14,7 @@ import org.apache.jasper.tagplugins.jstl.core.If;
 import model.ModelLogin;
 
 //É O CHAMADO CONTROLLER SÃO AS servlets ou ServletLoginController
-@WebServlet("/ServletLogin") // MAPEAMENTO DA URL QUE VEM DA TELA
+@WebServlet(urlPatterns = {"/principal/ServletLogin", "/ServletLogin"}) // MAPEAMENTO DA URL QUE VEM DA TELA
 public class ServletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -59,7 +59,7 @@ public class ServletLogin extends HttpServlet {
 			
 				
 			}else {
-				RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
+				RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
 				request.setAttribute("msg", "Informe o login e senha corretamente!!");
 				redirecionar.forward(request, response);
 			}//teste
@@ -74,3 +74,4 @@ public class ServletLogin extends HttpServlet {
 	}
 
 }
+
