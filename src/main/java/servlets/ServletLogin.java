@@ -44,6 +44,7 @@ public class ServletLogin extends HttpServlet {
 	
 		if (login != null && !login.isEmpty() && senha != null && !senha.isEmpty()) {
 
+			//ModelLogin modelLogin = null;/*Causando um erro*/
 			ModelLogin modelLogin = new ModelLogin();
 			modelLogin.setLogin(login);
 			modelLogin.setSenha(senha);
@@ -76,9 +77,12 @@ public class ServletLogin extends HttpServlet {
 		}
 	} catch (Exception e) {
 			e.printStackTrace();
+			RequestDispatcher redirecionar = request.getRequestDispatcher("erro.jsp");
+			request.setAttribute("msg", e.getMessage());
+			redirecionar.forward(request, response);
+			
 		}
 
 	}
 
 }
-
