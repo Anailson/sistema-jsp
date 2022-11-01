@@ -25,7 +25,7 @@
 	}
 	.msg{
 	 position: absolute;
-	 top: 70%;
+	 top: 80%;
 	 left: 33%;	
 	 color: red;
 	 font: 12px;
@@ -41,7 +41,7 @@
 	
 	<input type="hidden" value="<%= request.getParameter("url")%>" name="url">
 	
-	<div class="col-md-6">
+	<div class="mb-3">
 	    <label class="form-label">Login:</label>
 	    <input type="text" class="form-control" name="login" required="required">
 		    <div class="invalid-feedback">
@@ -49,7 +49,7 @@
 	    	</div>
   	</div>
   	
-  	<div class="col-md-6">
+  	<div class="mb-3">
 	    <label class="form-label">Senha:</label>
 	    <input type="password" class="form-control" name="senha" required="required">
 	    <div class="invalid-feedback">
