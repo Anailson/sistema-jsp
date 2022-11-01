@@ -28,8 +28,9 @@ public class ServletLogin extends HttpServlet {
 	// RECEBER OS DADOS PELA URL EM PARAMETROS
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		 doPost(request, response);
+	
+	
 	}
 
 	/// RECEBER OS DADOS ENVIADOS POR UM FORMULÁRIO
