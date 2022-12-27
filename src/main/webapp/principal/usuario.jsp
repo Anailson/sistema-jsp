@@ -23,7 +23,7 @@ pageEncoding="ISO-8859-1"%>
                   <div class="page-wrapper">
                     <div class="page-body">
                       <div class="row">
-                        <h2>conteudo das paginas do sistema - BASE</h2>
+                        <h2>Cadastro de usuário</h2>
                       </div>
                     </div>
                   </div>

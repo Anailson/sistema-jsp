@@ -30,7 +30,7 @@ pageEncoding="ISO-8859-1"%>
         </div>
       </div>
       <a href="index.html">
-        <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+        <img class="img-fluid" src="<%=request.getContextPath()%>/assets/images/logo.png" alt="Theme-Logo" />
       </a>
       <a class="mobile-options waves-effect waves-light">
         <i class="ti-more"></i>
@@ -82,7 +82,7 @@ pageEncoding="ISO-8859-1"%>
               <div class="media">
                 <img
                   class="d-flex align-self-center img-radius"
-                  src="assets/images/avatar-2.jpg"
+                  src="<%=request.getContextPath()%>/assets/images/avatar-2.jpg"
                   alt="Generic placeholder image"
                 />
                 <div class="media-body">
@@ -98,7 +98,7 @@ pageEncoding="ISO-8859-1"%>
               <div class="media">
                 <img
                   class="d-flex align-self-center img-radius"
-                  src="assets/images/avatar-4.jpg"
+                  src="<%=request.getContextPath()%>/assets/images/avatar-4.jpg"
                   alt="Generic placeholder image"
                 />
                 <div class="media-body">
@@ -114,7 +114,7 @@ pageEncoding="ISO-8859-1"%>
               <div class="media">
                 <img
                   class="d-flex align-self-center img-radius"
-                  src="assets/images/avatar-3.jpg"
+                  src="<%=request.getContextPath()%>/assets/images/avatar-3.jpg"
                   alt="Generic placeholder image"
                 />
                 <div class="media-body">
@@ -131,7 +131,7 @@ pageEncoding="ISO-8859-1"%>
         <li class="user-profile header-notification">
           <a href="#!" class="waves-effect waves-light">
             <img
-              src="assets/images/avatar-4.jpg"
+              src="<%=request.getContextPath()%>/assets/images/avatar-4.jpg"
               class="img-radius"
               alt="User-Profile-Image"
             />
