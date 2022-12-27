@@ -14,7 +14,7 @@ pageEncoding="ISO-8859-1"%>
         />
         <div class="user-details">
           <span id="more-details"
-            >John Doe<i class="fa fa-caret-down"></i
+            ><%= request.getSession().getAttribute("usuario")%><i class="fa fa-caret-down"></i
           ></span>
         </div>
       </div>

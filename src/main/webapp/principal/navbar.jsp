@@ -86,7 +86,7 @@ pageEncoding="ISO-8859-1"%>
                   alt="Generic placeholder image"
                 />
                 <div class="media-body">
-                  <h5 class="notification-user">John Doe</h5>
+                  <h5 class="notification-user"><%= session.getAttribute("usuario")%></h5>
                   <p class="notification-msg">
                     Lorem ipsum dolor sit amet, consectetuer elit.
                   </p>
@@ -135,7 +135,7 @@ pageEncoding="ISO-8859-1"%>
               class="img-radius"
               alt="User-Profile-Image"
             />
-            <span>John Doe</span>
+            <span><%= session.getAttribute("usuario")%></span>
             <i class="ti-angle-down"></i>
           </a>
           <ul class="show-notification profile-notification">
