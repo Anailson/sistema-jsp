@@ -35,7 +35,7 @@
 </head>
 <body>
 		
-		<h5>Bem vindo ao Curso de JSP</h5>
+		<h5>Treinamento de JSP - JDV Treinamento</h5>
 				
 	<form action="ServletLogin" method="post" class="row g-3 needs-validation" novalidate>
 	
@@ -44,8 +44,11 @@
 	<div class="mb-3">
 	    <label class="form-label">Login:</label>
 	    <input type="text" class="form-control" name="login" required="required">
-		    <div class="invalid-feedback">
-	     		Obrigatório 
+		    <div class="invalid-feedback"> 
+	     		Por favor, informar login. 
+	    	</div>
+	    	<div class="valid-feedback"> 
+	     		Usuário informado. 
 	    	</div>
   	</div>
   	
@@ -53,19 +56,24 @@
 	    <label class="form-label">Senha:</label>
 	    <input type="password" class="form-control" name="senha" required="required">
 	    <div class="invalid-feedback">
-	     	   Obrigatório  
+	     	   Por favor, informar senha.
 	    </div>
+	    <div class="valid-feedback"> 
+	     		Senha informada. 
+	    	</div>
   	</div>
  	 		
 	 <input  class="btn btn-primary" type="submit" value="Acessar">
 	
 	</form>
 	
-	<h3 class="msg">${msg}</h3>
+	<!-- Ler a msg que vem da ServletLogin -->
+	<h3 class="msg" >${msg}</h3>
 	
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+<!-- VALIDANDO DO BOOTSTRAP SITE https://getbootstrap.com/docs/5.3/forms/validation/ -->
 <script type="text/javascript">
 //Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {

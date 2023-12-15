@@ -13,8 +13,9 @@ pageEncoding="ISO-8859-1"%>
           alt="User-Profile-Image"
         />
         <div class="user-details">
-          <span id="more-details"
-            ><%= request.getSession().getAttribute("usuario")%><i class="fa fa-caret-down"></i
+          <span id="more-details">
+          <!-- Mostra usuário que esta logado -->
+          <%= request.getSession().getAttribute("usuario")%><i class="fa fa-caret-down"></i
           ></span>
         </div>
       </div>
@@ -24,8 +25,9 @@ pageEncoding="ISO-8859-1"%>
           <li class="more-details">
             <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
             <a href="#!"><i class="ti-settings"></i>Settings</a>
+            <!-- passando parametro protected void doGet -->
             <a href="ServletLogin?acao=logout">
-           		 <i class="ti-layout-sidebar-left"></i>Logout</a>
+           		 <i class="ti-layout-sidebar-left"></i>Sair</a>
           </li>
         </ul>
       </div>

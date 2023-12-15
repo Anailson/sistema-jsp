@@ -1,6 +1,7 @@
 package servlets;
 
-import java.io.IOException;
+import dao.DAOLoginRepository;
+import model.ModelLogin;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,11 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.jasper.tagplugins.jstl.core.If;
-
-import dao.DAOLoginRepository;
-import model.ModelLogin;
+import java.io.IOException;
 
 //É O CHAMADO CONTROLLER SÃO AS servlets ou ServletLoginController
 @WebServlet(urlPatterns = {"/principal/ServletLogin", "/ServletLogin"}) // MAPEAMENTO DA URL QUE VEM DA TELA
@@ -51,9 +48,10 @@ public class ServletLogin extends HttpServlet {
 
 		try {
 	
+			//Login e senha diferente de null - armazenar no objeto
 		if (login != null && !login.isEmpty() && senha != null && !senha.isEmpty()) {
 
-			//ModelLogin modelLogin = null;/*Causando um erro*/
+			//ModelLogin modelLogin = null;/*Causando um erro para chamar a pagina de erro.jsp*/
 			ModelLogin modelLogin = new ModelLogin();
 			modelLogin.setLogin(login);
 			modelLogin.setSenha(senha);
@@ -71,7 +69,7 @@ public class ServletLogin extends HttpServlet {
 				RequestDispatcher redirecionar = request.getRequestDispatcher(url);
 				redirecionar.forward(request, response);
 			
-				
+				//Caso não seja informado dados do usuário
 			}else {
 				RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
 				request.setAttribute("msg", "Informe o login e senha corretamente!!");
@@ -91,6 +89,7 @@ public class ServletLogin extends HttpServlet {
 			redirecionar.forward(request, response);
 			
 		}
+		
 
 	}
 

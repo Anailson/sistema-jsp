@@ -86,6 +86,7 @@ pageEncoding="ISO-8859-1"%>
                   alt="Generic placeholder image"
                 />
                 <div class="media-body">
+                  <!-- Mostra usuário que está logado no sistema -->
                   <h5 class="notification-user"><%= session.getAttribute("usuario")%></h5>
                   <p class="notification-msg">
                     Lorem ipsum dolor sit amet, consectetuer elit.
@@ -156,8 +157,9 @@ pageEncoding="ISO-8859-1"%>
               </a>
             </li>
             <li class="waves-effect waves-light">
+            <!-- passando parametro protected void doGet -->
               <a href="ServletLogin?acao=logout">
-                <i class="ti-layout-sidebar-left"></i> Logout
+                <i class="ti-layout-sidebar-left"></i> Sair
               </a>
             </li>
           </ul>

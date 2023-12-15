@@ -8,11 +8,12 @@
 </head>
 <body>
    <h1>Mensagem de erro, entre em contato com a equipe de suporte do sistema</h1>
+   
    <textarea rows="50" cols="50">${msg}</textarea>
    
    <%
    	 out.print(request.getAttribute("msg"));
    %>
-
+   <!-- Pegando atributo  out.print(request.getAttribute("msg"))-->
 </body>
 </html>

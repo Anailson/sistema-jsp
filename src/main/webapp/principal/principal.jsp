@@ -5,6 +5,7 @@ pageEncoding="ISO-8859-1"%>
 <html lang="en">
   <jsp:include page="head.jsp"></jsp:include>
 
+<!-- Os include estão chamando as pagina. Pois assim deixa o código mais limpo e organizado -->
   <body>
     <jsp:include page="theme-loader.jsp"></jsp:include>
     <div id="pcoded" class="pcoded">

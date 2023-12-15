@@ -24,6 +24,16 @@ pageEncoding="ISO-8859-1"%>
                     <div class="page-body">
                       <div class="row">
                         <h2>Cadastro de usuário</h2>
+
+                        <form>
+                              <div class="form-group row">
+                                <label>Simple input</label>
+                                <div>
+                                    <input type="text">
+                                </div>
+                              </div>
+                              
+                         </form>
                       </div>
                     </div>
                   </div>
