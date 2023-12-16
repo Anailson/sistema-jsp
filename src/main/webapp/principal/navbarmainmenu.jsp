@@ -26,7 +26,7 @@ pageEncoding="ISO-8859-1"%>
             <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
             <a href="#!"><i class="ti-settings"></i>Settings</a>
             <!-- passando parametro protected void doGet -->
-            <a href="ServletLogin?acao=logout">
+            <a href="<%=request.getContextPath()%>/ServletLogin?acao=logout">
            		 <i class="ti-layout-sidebar-left"></i>Sair</a>
           </li>
         </ul>
@@ -69,7 +69,7 @@ pageEncoding="ISO-8859-1"%>
         </a>
         <ul class="pcoded-submenu">
           <li class=" ">
-            <a href="principal/usuario.jsp" class="waves-effect waves-dark">
+            <a href="<%=request.getContextPath()%>/principal/usuario.jsp" class="waves-effect waves-dark">
               <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
               <span class="pcoded-mtext" data-i18n="nav.basic-components.alert"
                 >Usuario</span

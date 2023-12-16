@@ -158,7 +158,7 @@ pageEncoding="ISO-8859-1"%>
             </li>
             <li class="waves-effect waves-light">
             <!-- passando parametro protected void doGet -->
-              <a href="ServletLogin?acao=logout">
+              <a href="<%=request.getContextPath()%>/ServletLogin?acao=logout">
                 <i class="ti-layout-sidebar-left"></i> Sair
               </a>
             </li>
