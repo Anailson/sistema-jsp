@@ -69,8 +69,9 @@
                                                 </div><!--card-->
                                             </div><!--col-sm-12-->
                                         </div><!--row-->
+                                      
                                     </div><!--page-wrapper-->
-
+										  <span>${msg}</span><!-- Mensagem de controller ao salvar usuário -->
                                 </div><!-- main-body -->
                             </div><!-- pcoded-inner-contentr -->
                             <div id="styleSelector"></div>
