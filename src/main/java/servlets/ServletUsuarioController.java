@@ -42,7 +42,7 @@ public class ServletUsuarioController extends HttpServlet {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
 		
-		//iniciando objeto
+		//iniciando objeto - gravando novo usuario
 		ModelLogin modelLogin = new ModelLogin();
 		
 		modelLogin.setId(id != null && !id.isEmpty() ? Long.parseLong(id) : null);
@@ -51,7 +51,9 @@ public class ServletUsuarioController extends HttpServlet {
 		modelLogin.setLogin(login);
 		modelLogin.setSenha(senha);
 		
-		daoUsuarioRepository.gravarUsuario(modelLogin);	
+		//vai para o metodo gravar e sql
+		modelLogin = daoUsuarioRepository.gravarUsuario(modelLogin);	
+		
 		
 		request.setAttribute("msg", "Usuário cadastrado!");
 		request.setAttribute("modelLogin", modelLogin);	
