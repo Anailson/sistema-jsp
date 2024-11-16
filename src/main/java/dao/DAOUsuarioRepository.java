@@ -64,5 +64,22 @@ public class DAOUsuarioRepository {
 		return modelLogin;
 	}
 	
+	
+	// Novo método para verificar se o login já existe
+    public boolean validarLogin(String login) throws SQLException {
+    	
+        String sql = "SELECT COUNT(1) > 0 as existe from model_login WHERE UPPER(login) = UPPER('" + login +"');";
+
+        PreparedStatement statement = connection.prepareStatement(sql);
+       
+        ResultSet resultado = statement.executeQuery();
+
+        if (resultado.next()) {
+            return resultado.getBoolean("existe");
+        }
+
+        return false;
+    }
+	
 
 }
