@@ -44,11 +44,10 @@ public class DAOUsuarioRepository {
 		
 		ModelLogin modelLogin = new ModelLogin();
 		
-		String sql =  "select * from model_login where upper(login) = upper('" + login + "')";
-		
+		String sql =  "select * from model_login where upper(login) = upper('" + login + "')";		
 		
 		PreparedStatement statement = connection.prepareStatement(sql);
-		
+				
 		ResultSet resultado =statement.executeQuery();		
 		
 		
