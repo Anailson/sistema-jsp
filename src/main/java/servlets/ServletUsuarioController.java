@@ -56,7 +56,13 @@ public class ServletUsuarioController extends HttpServlet {
 		if (daoUsuarioRepository.validarLogin(modelLogin.getLogin()) && modelLogin.getId() == null) {
 			msg = "Já existe usuário com o mesmo login, informe outro login";
 			
-		}else {
+		/*}else {
+			if(modelLogin.isNovo()) {
+				msg = "Gravado com sucesso!";
+			}else {
+				msg = "Atualizado com sucesso!";
+			}
+			*/
 			//vai para o metodo gravar e sql
 			modelLogin = daoUsuarioRepository.gravarUsuario(modelLogin);	
 		}
